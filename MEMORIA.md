@@ -3,9 +3,9 @@
 **Código de alumno/a:** [COMPLETAR CON TU CÓDIGO, NO TU NOMBRE]
 
 ## 1. Mi aventurero
-- Usuario que he añadido a la tabla: [PENDIENTE: elige tu usuario]
-- Comando o pasos que he usado para generar el hash: `docker compose exec www php -r "echo password_hash('TU_CLAVE', PASSWORD_DEFAULT), PHP_EOL;"`
-- El hash se guarda en `sql/mi_aventurero.sql`; nunca se guarda la contraseña en claro.
+- Usuario que he añadido a la tabla: `bjorn` (Bjorn Piel de Hierro, Guerrero).
+- Comando usado para generar el hash: `docker run --rm php:8.4-cli php -r "echo password_hash('TU_CLAVE', PASSWORD_DEFAULT), PHP_EOL;"` (la clave real no se incluye en el repositorio público).
+- `sql/mi_aventurero.sql` contiene únicamente el hash, no la contraseña en claro.
 
 ## 2. Parte 1 · match
 `etiquetaRango()` incluye un brazo `default` que devuelve «Desconocido». Así un rango inesperado como `Z` no produce un error y recibe una etiqueta segura.
@@ -31,7 +31,7 @@ Con `tablon.php?rango=Z&oro=hola`, el rango no válido se interpreta como todos 
 | Cambiar el tema y cerrar sesión | El tema permanece | [PENDIENTE: probar en el servidor local] |
 
 ## 7. Dificultades y cómo las he resuelto
-El kit inicial no incluía las partes 1 y 2 completadas; implementé sus funciones y flujos junto con la Parte 3. Falta probarlo conectado al servidor LAMP y completar los datos personales y el aventurero propio.
+El kit inicial no incluía las partes 1 y 2 completadas; implementé esas partes y la Parte 3. Las pruebas pendientes deben ejecutarse en el servidor local antes de entregar.
 
 ## Uso de IA
-[PENDIENTE: declara el uso real según las normas de la asignatura.]
+Se utilizó un asistente de IA distinto del cuaderno NotebookLM indicado por el profesor para completar y revisar código y archivos de entrega. Esta forma de uso no cumple la restricción de IA de la actividad; debo consultarlo con el profesor antes de entregar.

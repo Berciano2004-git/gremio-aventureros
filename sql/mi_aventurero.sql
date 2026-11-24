@@ -1,4 +1,3 @@
--- Añade aquí tu propio aventurero después de generar el hash con password_hash().
--- Sustituye los marcadores antes de ejecutar; no pongas la contraseña en este SQL.
+-- Bjorn Piel de Hierro. No se almacena la contraseña en claro.
 INSERT INTO aventureros (usuario, nombre, clase, password_hash)
-VALUES ('TU_USUARIO', 'TU_NOMBRE_DE_AVENTURERO', 'TU_CLASE', 'PEGA_AQUI_EL_HASH_GENERADO');
+VALUES ('bjorn', 'Bjorn Piel de Hierro', 'Guerrero', '$2y$12$vMQPuDZkTTC3yTssq7QO0OPlHJyXl6HzDa4yKgJxszP9CWXRDuqEO');
