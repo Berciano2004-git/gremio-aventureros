@@ -1,6 +1,6 @@
 # Memoria · Gremio de Aventureros
 
-**Código de alumno/a:** [COMPLETAR CON TU CÓDIGO, NO TU NOMBRE]
+**Código de alumno/a:** 157264
 
 ## 1. Mi aventurero
 - Usuario que he añadido a la tabla: `bjorn` (Bjorn Piel de Hierro, Guerrero).
