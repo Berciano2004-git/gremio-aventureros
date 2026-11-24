@@ -22,13 +22,20 @@ Con `tablon.php?rango=Z&oro=hola`, el rango no válido se interpreta como todos 
 - El mismo mensaje evita revelar si existe el usuario y dificulta la enumeración de cuentas.
 
 ## 6. Pruebas que he hecho
-| Prueba | Resultado esperado | Resultado obtenido |
+| # | Prueba | Resultado obtenido |
 |---|---|---|
-| Entrar en tablon.php sin login | Redirección al login con aviso de acceso privado | [PENDIENTE: probar en el servidor local] |
-| Login con contraseña mala | «Usuario o contraseña incorrectos.» | [PENDIENTE: probar en el servidor local] |
-| Aceptar la misma misión dos veces | No duplica; muestra aviso | [PENDIENTE: probar en el servidor local] |
-| Cerrar sesión y volver al zurrón | Requiere login; el zurrón comienza vacío al volver | [PENDIENTE: probar en el servidor local] |
-| Cambiar el tema y cerrar sesión | El tema permanece | [PENDIENTE: probar en el servidor local] |
+| 1 | Acceso de invitado a `tablon.php`, `zurron.php` y `preferencias.php` | Superada: redirige al login con el aviso de acceso privado. |
+| 2 | Contraseña incorrecta | Superada: muestra «Usuario o contraseña incorrectos.» |
+| 3 | Usuario `' OR '1'='1` | Superada: no autentica y muestra el mismo mensaje genérico. |
+| 4 | «Recordar mi usuario» y cerrar sesión | Superada: conserva solo `gremio_usuario` y rellena el login; al desmarcar se envía su caducidad. |
+| 5 | Aceptar la misma misión dos veces | Superada: el zurrón conserva una sola copia; el POST redirige al tablón. |
+| 6 | Recargar el tablón | Superada: el contador aumentó entre peticiones de la misma sesión. |
+| 7 | Cambiar a tema oscuro y cerrar sesión | Superada: el tema permanece y el zurrón queda vacío al iniciar sesión de nuevo. |
+| 8 | Manipular `gremio_tema` | Superada: valor no permitido aplica el tema claro y no se usa como clase CSS. |
+| 9 | `tablon.php?rango=Z&oro=hola` | Superada: muestra las 10 misiones sin error. |
+| 10 | Login de Bjorn Piel de Hierro | Superada: entra al tablón. |
+
+Comprobaciones adicionales de Entrega 1: 10 tarjetas con clases de rango fácil/media/difícil; rango B y oro mínimo 500 muestra 2 misiones; M05 + M08 suma 5.650 mo. Sintaxis PHP: sin errores en todos los archivos de `src/`.
 
 ## 7. Dificultades y cómo las he resuelto
 El kit inicial no incluía las partes 1 y 2 completadas; implementé esas partes y la Parte 3. Las pruebas pendientes deben ejecutarse en el servidor local antes de entregar.
